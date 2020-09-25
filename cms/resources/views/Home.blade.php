@@ -17,7 +17,7 @@
         <!-- Blog Post -->
         @foreach ($article as $artic)
         <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+            <img class="card-img-top" src="https://i.ytimg.com/vi/OkVhyWgwmQk/maxresdefault.jpg" alt="Card image cap">
             <div class="card-body">
                 <h2 class="card-title">{{ $artic->title }}</h2>
             <p class="card-text">{{ Str::limit($artic->content, 100, '...') }}</p>
