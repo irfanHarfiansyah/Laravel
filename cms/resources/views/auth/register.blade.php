@@ -3,9 +3,15 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+<<<<<<< Updated upstream
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
+=======
+        <div class="col-md-8" style="padding-top: 50px">
+            <div class="card" style="opacity: 90%">
+                <div class="card-header text-center" style="background-color: rgb(223, 169, 98);" >{{ __('Register') }}</div>
+>>>>>>> Stashed changes
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -63,7 +69,11 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
+<<<<<<< Updated upstream
                                 <button type="submit" class="btn btn-primary">
+=======
+                                <button type="submit" class="btn btn-warning">
+>>>>>>> Stashed changes
                                     {{ __('Register') }}
                                 </button>
                             </div>

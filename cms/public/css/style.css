@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+
+
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    position: relative;
+
+}
+
+section.konten {
+    margin-top: 170px;
+    justify-content: center;
+}
+
+span {
+    color: rgb(240, 148, 27);
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 70px;
+}
+
+nav.navbar {
+    box-shadow: 2px 2px 2px 2px rgba(112, 112, 112, 0.164);
+    width: 100%;
+    z-index: 100;
+    top: 0px;
+}
+
+nav .navbar-brand {
+    font-weight: 700;
+    margin-right: 490px;
+}
+
+nav ul li.nav-item.active a.nav-link {
+    border-bottom: 2px solid rgba(240, 155, 27, 0.479);
+
+}
+
+nav ul li a.nav-link {
+    margin: 0px 30px;
+    font-size: 15px;
+    font-weight: medium;
+    color: rgb(240, 148, 27);
+}
+
+nav ul li.nav-item a.nav-link:hover {
+    background-color: rgba(240, 155, 27, 0.479);
+    transition: all ease 0.5s;
+    border-radius: 5px;
+    color: white;
+}
+
+a.dropdown-item{
+    color: rgb(240, 148, 27);
+}
+a.dropdown-item:hover{
+    background-color: rgba(240, 155, 27, 0.479);
+    transition: all ease 0.5s;
+    color: white;
+}
+a.dropdown-item:active{
+    background-color: rgb(240, 148, 27); 
+}
+
+.all{
+    padding-top: 270px;
+}
+
+.text1 p:nth-child(1) {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 0px;
+}
+
+.text1 p:nth-child(2) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.gambar img {
+    position: absolute;
+    left: 55%;
+    top: -22%;
+    width: 42%;
+}
+
+a button {
+    border-radius: 3px;
+    background-color: rgba(22, 22, 22, 0.822);
+    border: none;
+    padding: 14px 25px;
+    font-weight: medium;
+    color: rgb(226, 226, 226);
+    outline: none;
+
+}
+
+a button:hover {
+    box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.26);
+    transition: all ease 0.4s;
+    border: none;
+}
+
+a button:active {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.line img:nth-child(1) {
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+    height: 130px;
+}
+
+.line img:nth-child(2) {
+    position: absolute;
+    left: 7%;
+    bottom: 2%;
+    height: 30px;
+    width: 4px;
+}
+
+.ilus img{
+    position: absolute;
+    width: 370px;
+    bottom: 200px;
+    z-index: -10;
+}
+
+/* cake */
+
+.text2 p {
+    padding-top: 90px;
+}
+
+.text2 p:nth-child(1) {
+    font-weight: 700;
+    font-size: 80px;
+
+}
+
+.text2 p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+}
+
+.manage button{
+    position: absolute;
+    bottom: 499px;
+    left: 683px;
+}
+
+.card-body p.card-text {
+    font-family: 'Poppins', sans-serif;
+}
+
+section.cake .container {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+
+}
+
+section.cake {
+    padding-bottom: 150px;
+}
+
+.card img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+section.cake .card {
+    margin-bottom: 50px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(212, 212, 212, 0.815);
+}
+
+.textCake p{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 0px;
+    margin-bottom: 50px;
+}
+
+/* article-cake */
+
+section.articCake {
+    padding-top: 60px;
+}
+
+.artic {
+    max-height: 550px;
+}
+
+.artic img {
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.resep {
+    margin-left: 30px;
+}
+
+.proses {
+    margin: -300px 0px 50px 0px;
+}
+
+div.card-header {
+    background-color: rgb(46, 46, 46);
+    font-weight: 600;
+    text-align: center;
+}
+
+ul.list-group li.list-group-item {
+    font-size: 15px;
+}
+
+section.cake{
+    background-image: url(https://weddinginvitations.nz/wp-content/uploads/2019/03/background-batik-putih-2.png);
+    background-attachment: fixed;
+}
+
+ul.pagination{
+    position: absolute;
+    bottom: 571px;
+    right: 700px;
+}
+
