@@ -7,6 +7,7 @@
 
 <!-- Page Content -->
 <section class="cake">
+
   <div class="container">
     <div class="text2">
       <p>CAKE</p>
@@ -14,8 +15,9 @@
     </div>
   </div>
 
-
+  
   <div class="container">
+    
 @foreach ($article as $artic)  
             <div class="card">
               <a href="#"><img class="card-img" src="{{ $artic->featured_image }}" alt=""></a>
@@ -33,7 +35,7 @@
    
 
 @endforeach
-
+<a href="/manage" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a>
         <!-- Pagination -->
         <ul class="pagination justify-content-center">
           <li class="page-ite" >

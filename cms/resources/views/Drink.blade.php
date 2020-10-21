@@ -33,9 +33,16 @@
    
 
 @endforeach
-<div class="next">
-   
-</div>
+<a href="/manageDrink" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a>
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center">
+          <li class="page-ite" >
+            <a class="page-link" href="#" style="background-color: black"><i class="fas fa-angle-double-left" style="color: rgb(235, 132, 15)"></i></a>
+          </li>
+          <li class="page-ite ml-3">
+            <a class="page-link" href="#" style="background-color: black"><i class="fas fa-angle-double-right" style="color: rgb(235, 132, 15)"></i></a>
+          </li>
+        </ul>
     </div>
 </section>
 @include('layouts.Footer')

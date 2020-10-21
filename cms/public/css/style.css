@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700500;600;800&family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
 
 body {
@@ -52,6 +54,18 @@ nav ul li.nav-item a.nav-link:hover {
     color: white;
 }
 
+a.dropdown-item{
+    color: rgb(240, 148, 27);
+}
+a.dropdown-item:hover{
+    background-color: rgba(240, 155, 27, 0.479);
+    transition: all ease 0.5s;
+    color: white;
+}
+a.dropdown-item:active{
+    background-color: rgb(240, 148, 27); 
+}
+
 .all{
     padding-top: 270px;
 }
@@ -95,6 +109,7 @@ a button:hover {
 a button:active {
     box-shadow: none;
     border: none;
+    outline: none;
 }
 
 .line img:nth-child(1) {
@@ -135,6 +150,12 @@ a button:active {
     font-family: 'Poppins', sans-serif;
 }
 
+.manage button{
+    position: absolute;
+    bottom: 499px;
+    left: 683px;
+}
+
 .card-body p.card-text {
     font-family: 'Poppins', sans-serif;
 }
@@ -160,6 +181,13 @@ section.cake .card {
     margin-left: 10px;
     border: none;
     background-color: rgba(212, 212, 212, 0.815);
+}
+
+.textCake p{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 0px;
+    margin-bottom: 50px;
 }
 
 /* article-cake */
@@ -203,7 +231,6 @@ section.cake{
 ul.pagination{
     position: absolute;
     bottom: 571px;
-    right: 620px;
+    right: 700px;
 }
 
-/* caraousel */

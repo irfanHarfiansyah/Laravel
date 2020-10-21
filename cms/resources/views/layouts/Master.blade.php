@@ -1,32 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
+  <title>@yield('title')</title>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-        
+       
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>@yield('title')</title>
-{{--  --}}
+  <!-- Bootstrap core CSS -->
+  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
+  <!-- Custom styles for this template -->
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
-
-<body>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg position-fixed  bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('./') }}" style="color: rgb(240, 148, 27);">CookingKuy<i class="fas fa-utensils ml-2"></i></a>
+            <a class="navbar-brand" href="{{ url('./home') }}" style="color: rgb(240, 148, 27);">CookingKuy<i class="fas fa-utensils ml-2"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,9 +43,24 @@
                     <li class="nav-item  {{ request()->is('Drink') ? ' active' : ''}}">
                         <a class="nav-link" href="{{ url('./Drink') }}">DRINK</a>
                     </li>
-                </ul>
-        </div>
-    </nav>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class=" fas fa-user-circle mr-1"></i>  {{ Auth::user()->name  }}
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item " href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                             {{ __('Logout') }}
+                         </a>
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                             @csrf
+                         </form>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
 
     @yield('content')
 
@@ -59,6 +75,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
