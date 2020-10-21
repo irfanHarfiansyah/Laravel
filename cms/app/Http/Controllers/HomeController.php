@@ -16,11 +16,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-<<<<<<< Updated upstream
-    
-
-=======
->>>>>>> Stashed changes
     /**
      * Show the application dashboard.
      *
@@ -28,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-<<<<<<< Updated upstream
+
         return view('Home1');
 =======
         return view('home');
