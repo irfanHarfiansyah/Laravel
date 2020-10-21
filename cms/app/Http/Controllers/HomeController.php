@@ -25,8 +25,8 @@ class HomeController extends Controller
     {
 
         return view('Home1');
-=======
+
         return view('home');
->>>>>>> Stashed changes
+
     }
 }

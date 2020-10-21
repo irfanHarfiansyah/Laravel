@@ -3,17 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-<<<<<<< Updated upstream
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-=======
         <div class="col-lg-8" style="padding-top: 50px">
             <div class="card" style="opacity: 90%">
                 <div class="card-header text-center" style="background-color: rgb(223, 169, 98);" >{{ __('Login') }}</div>
@@ -23,7 +12,6 @@
                         @csrf
 
                         <div class="form-group row"  >
->>>>>>> Stashed changes
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -65,11 +53,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-<<<<<<< Updated upstream
-                                <button type="submit" class="btn btn-primary">
-=======
                                 <button type="submit" class="btn btn-warning" style="opacity: 100%">
->>>>>>> Stashed changes
                                     {{ __('Login') }}
                                 </button>
 
