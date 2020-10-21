@@ -1,18 +1,27 @@
-<link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+@extends('layouts.Master')
 
-<style>
-    body{
-        background-color: rgb(124, 177, 165)
-    }
-    h1{
-        text-align: center;
-        color: antiquewhite
-    }
-</style>
+@section('title', 'First-Page')
+    
+@section('content')
 
-<div class="container " style="padding-top: 50px">
-   <a href="login" style="text-decoration: none"> <button type="button" class="btn btn-primary btn-lg btn-block">LOGIN</button></a>
-   <h1>LARAVEL AUTENTIKASI</h1>
-    <a href="register" style="text-decoration: none"><button type="button" class="btn btn-secondary btn-lg btn-block">REGISTER</button></a>
-   
-</div>
+<section class="konten">
+  <div class="container">
+      <div class="all ">
+          <div class="text1">
+              <p>Selamat Datang Di <span> <br> CookingKuy <i class="fas fa-utensils ml-2"></i> </span> </p>
+              <p>Disini tempat resep yang paling tepat</p>
+          </div>
+          <div class="ilus">
+              <img src="/img/cooking.svg" alt="">
+          </div>
+      </div>
+      <div class="gambar">
+          <img src="/img/chicke.png" alt="">
+      </div>
+      <div class="line">
+          <img src="img/Line1.png" alt="">
+          <img src="img/Line2.png" alt="">
+      </div>
+  </div>
+</section>
+@endsection

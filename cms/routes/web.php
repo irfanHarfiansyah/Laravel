@@ -17,7 +17,7 @@ Route::get('/article/{id}', 'ArticleController@index');
 
 Auth::routes();
 
-Route::get('/home', 'home1Controller@index')->name('home');
+Route::get('/home', 'FirstPageController@index')->name('home');
 
 //  Route::get('/home', 'FirstPageController@index');
 
@@ -51,8 +51,4 @@ Route::post('/manageDrink/create','ArticleDrinkController@create');
 Route::get('/manageDrink/editDrink/{id}','ArticleDrinkController@edit');
 Route::post('/manageDrink/update/{id}','ArticleDrinkController@update');
 Route::get('/manageDrink/delete/{id}','ArticleDrinkController@delete');
-
-Auth::routes();
-
-Route::get('/home', 'FirstPageController@index')->name('home');
 
