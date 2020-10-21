@@ -7,17 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<<<<<<< Updated upstream
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    {{-- bootstrap --}}
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-=======
     <title >{{ config('app.name', 'CookingKuy') }}</title>
 
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
->>>>>>> Stashed changes
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -25,18 +18,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-<<<<<<< Updated upstream
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-=======
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Styles -->
@@ -49,7 +30,6 @@
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: rgb(240, 148, 27);">
                     CookingKuy<i class="fas fa-utensils ml-2">
                     </i></a>
->>>>>>> Stashed changes
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -65,19 +45,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-<<<<<<< Updated upstream
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-=======
-                                <a class="nav-link" style="color: antiquewhite" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" style="color: antiquewhite" href="{{ route('register') }}">{{ __('Register') }}</a>
->>>>>>> Stashed changes
                                 </li>
                             @endif
                         @else
