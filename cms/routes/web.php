@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'home1Controller@index')->name('home');
 
-// Route::get('/home', 'FirstPageController@index');
+ Route::get('/home', 'FirstPageController@index');
 
 Route::get('/Cake', 'CakeController@index'); 
 
