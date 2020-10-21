@@ -7,19 +7,18 @@
 // Route::get('/hello', 'WelcomeController@hello');
 
 // Route::get('/home', 'home1Controller@index'); 
-Route::get('/', function () {
-    return view('FirstPage');
-});
+// Route::get('/', function () {
+//     return view('FirstPage');
+// });
 
 Route::get('/about', 'AboutController@index');
 
 Route::get('/article/{id}', 'ArticleController@index');
 
-<<<<<<< Updated upstream
 Auth::routes();
 
 Route::get('/home', 'home1Controller@index')->name('home');
-=======
+
 // Route::get('/home', 'FirstPageController@index');
 
 Route::get('/Cake', 'CakeController@index'); 
@@ -56,4 +55,4 @@ Route::get('/manageDrink/delete/{id}','ArticleDrinkController@delete');
 Auth::routes();
 
 Route::get('/home', 'FirstPageController@index')->name('home');
->>>>>>> Stashed changes
+
