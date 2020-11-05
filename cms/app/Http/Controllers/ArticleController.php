@@ -7,9 +7,12 @@ use App\Article;
 use Illuminate\Support\Facades\Cache;
 class ArticleController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');  
+    }
+
     public function index($id){
         $article = Article::find($id);
         return view('Article', ['id'=>$id])->with(compact('article'));
-    
     }
 }

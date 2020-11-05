@@ -31,7 +31,7 @@
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+        <img class="img-fluid rounded" src="{{ $article->featured_image}}" alt="" >
 
         <hr>
 

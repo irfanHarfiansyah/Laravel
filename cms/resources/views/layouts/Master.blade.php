@@ -30,12 +30,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <a class="nav-link" href="{{ url('./home') }}">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item">
+            @can('home')
+            <a class="nav-link" href="{{ url('./home') }}">Home
+              @endcan
+             </a>
           </li>
           <li class="nav-item">
+            @can('home')
             <a class="nav-link" href="{{ url('./about') }}">About</a>
+            @endcan
+          </li>
+          <li class="nav-item">
+            @can('manage')
+            <a class="nav-link" href="{{ url('./manage') }}">Manage</a>
+            @endcan
+          </li>
+          <li class="nav-item">
+            @can('manage')
+            <a class="nav-link" href="{{ url('./manageUser') }}">AddUser</a>
+            @endcan
           </li>
           <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
