@@ -13,11 +13,10 @@
       <div class="col-md-8">
   
         <h1 class="my-4">Page Heading</h1>
-  
         <!-- Blog Post -->
         @foreach ($article as $artic)
         <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+            <img class="card-img-top" src="{{ $artic->featured_image }}" alt="Card image cap">
             <div class="card-body">
                 <h2 class="card-title">{{ $artic->title }}</h2>
             <p class="card-text">{{ Str::limit($artic->content, 100, '...') }}</p>
@@ -48,14 +47,16 @@
         <!-- Search Widget -->
         <div class="card my-4">
           <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
+          <form action="/search" method="get">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" name="search">
+                <span class="input-group-append">
+                  <button class="btn btn-secondary" type="submit">Go!</button>
+                </span>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
   
         <!-- Categories Widget -->

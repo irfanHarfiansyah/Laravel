@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
-
+use DB;
 
 class HomeController extends Controller
 {
@@ -16,5 +16,14 @@ class HomeController extends Controller
     });
         $article = Cache::get('article');
         return view('Home')->with(compact('article'));
+
+    }
+
+    public function search(Request $request){
+        $search = $request->search;
+        $result = \DB::table('articles')
+        ->where('title','LIKE', "%".$search."%")
+        ->paginate();
+        return view('home',['article'=>$result]);
     }
 }
