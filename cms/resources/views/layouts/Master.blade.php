@@ -31,25 +31,32 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            @can('home')
-            <a class="nav-link" href="{{ url('./home') }}">Home
+            <li class="nav-item {{ Route::is('home') ? 'active' : '' }}">
+             @can('home')
+                 <a class="nav-link" href="{{ url('./home') }}">Home</a>
               @endcan
-             </a>
+              </li>         
           </li>
           <li class="nav-item">
-            @can('home')
-            <a class="nav-link" href="{{ url('./about') }}">About</a>
-            @endcan
+            <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
+              @can('home')
+              <a class="nav-link" href="{{ url('./about') }}">About</a>
+              @endcan
+            </li>    
           </li>
           <li class="nav-item">
-            @can('manage')
-            <a class="nav-link" href="{{ url('./manage') }}">Manage</a>
-            @endcan
+            <li class="nav-item {{ Route::is('manage') ? 'active' : '' }}">
+              @can('manage')
+              <a class="nav-link" href="{{ url('./manage') }}">Manage</a>
+              @endcan
+            </li>
           </li>
-          <li class="nav-item">
-            @can('manage')
-            <a class="nav-link" href="{{ url('./manageUser') }}">AddUser</a>
-            @endcan
+           <li class="nav-item">
+              <li class="nav-item {{ Route::is('manageUser') ? 'active' : '' }}">
+               @can('manage')
+              <a class="nav-link" href="{{ url('./manageUser') }}">AddUser</a>
+              @endcan
+           </li>
           </li>
           <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

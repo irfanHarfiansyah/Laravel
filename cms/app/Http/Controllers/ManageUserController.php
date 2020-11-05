@@ -40,7 +40,7 @@ class ManageUserController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = \Hash::$request->password;
+        $user->password = \Hash::make($request->password);
         $user->roles = $request->roles;
         $user->save();
         return redirect('/manageUser');
