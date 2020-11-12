@@ -1,9 +1,8 @@
 @extends('layouts.Master')
-
-@section('title', 'Home')
-    
 @section('content')
-    
+
+
+
 
 <!-- Page Content -->
 <div class="container">
@@ -17,7 +16,7 @@
         <!-- Blog Post -->
         @foreach ($article as $artic)
         <div class="card mb-4">
-            <img class="card-img-top" src="{{ $artic->featured_image}}" alt="Card image cap" style="max-height: 470px">
+            <img class="card-img-top" src="{{'storage/'. $artic->featured_image }}" alt="Card image cap"  style="max-height: 470px">
             <div class="card-body">
                 <h2 class="card-title">{{ $artic->title }}</h2>
             <p class="card-text">{{ Str::limit($artic->content, 100, '...') }}</p>
