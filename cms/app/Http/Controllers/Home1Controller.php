@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use PDF;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
 class Home1Controller extends Controller
@@ -16,4 +17,15 @@ class Home1Controller extends Controller
         $article = Cache::get('article');
         return view('Home')->with(compact('article'));
     }
+<<<<<<< Updated upstream
+=======
+
+    public function cetak_pdf(){
+        $article = Article::all();
+        $pdf = PDF::loadview('articles_pdf',['article'=>$article]);
+        return $pdf->stream();
+       }
+       
+
+>>>>>>> Stashed changes
 }

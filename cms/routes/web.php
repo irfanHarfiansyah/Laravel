@@ -14,6 +14,8 @@ Route::get('/', function () {
 Route::get('/about', 'AboutController@index');
 
 Route::get('/article/{id}', 'ArticleController@index');
+Route::get('/manage/cetak_pdf', 'Home1Controller@cetak_pdf');
+
 
 Auth::routes();
 

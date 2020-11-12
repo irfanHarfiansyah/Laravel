@@ -31,7 +31,11 @@
         <hr>
 
         <!-- Preview Image -->
+<<<<<<< Updated upstream
         <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+=======
+        <img class="img-fluid rounded" src="{{'/storage/' .$article->featured_image }}" alt="Card image cap" >
+>>>>>>> Stashed changes
 
         <hr>
 
