@@ -18,7 +18,7 @@
   <div class="container">
 @foreach ($drink as $dr)  
             <div class="card">
-              <a href="#"><img class="card-img" src="{{ $dr->featured_image }}" alt=""></a>
+              <a href="#"><img class="card-img" src="{{asset('storage/'.$dr->featured_image)}}" alt=""></a>
               <div class="card-body ">
                 <h4 class="card-title">
                  {{ $dr->title }}
@@ -33,7 +33,8 @@
    
 
 @endforeach
-<a href="/manageDrink" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a>
+{{-- <a href="/manageDrink" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a> --}}
+
         <!-- Pagination -->
         <ul class="pagination justify-content-center">
           <li class="page-ite" >

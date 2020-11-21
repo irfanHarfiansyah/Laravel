@@ -3,22 +3,32 @@
     <div class="textCake" style="padding-top: 10px">
         <p>MASUKKAN DATA</p>
       </div>
-    <form action="/manageDrink/create" method="post" enctype="multipart/form-data">
+    <form action="/manageUser/create" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="title">Judul</label>
+            <label for="name">Name</label>
             <input type="text" class="form-control"
-            required="required" name="title"></br>
+            required="required" name="name"></br>
         </div>
     <hr style="background-color: orangered">   
-        <h6>Content</h6>
-        <textarea name="content" id="" cols="80" rows="9" style="margin-bottom: 30px"></textarea>
+        <h6>E-mail</h6>
+        <textarea name="email" id="" cols="80" rows="9" style="margin-bottom: 30px"></textarea>
     <hr style="background-color: orangered">
         <div class="form-group">
-            <label for="image">Feature Image</label>
-            <input type="file" class="form-control"
-            required="required" name="image"></br>
+            <label for="password">Password</label>
+            <input type="password" class="form-control"
+            required="required" name="password"></br>
         </div>
+        <div class="form-group">
+            <label for="roles">Roles</label>
+            <input type="text " class="form-control"
+            required="required" name="roles"></br>
+        </div>
+        <div class="form-group">
+            <label for="image">Feature Image</label>
+            <input type="file" class="form-control" required="required" name="image"></br>
+        </div>
+        
         
         <button type="submit" name="add" class="btn btn-dark float-right" style="margin-bottom: 90px">Tambah Data</button>
     </form>

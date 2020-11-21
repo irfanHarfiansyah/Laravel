@@ -5,8 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Gate;
 class ArticleCakeController extends Controller
-{
+{   
+
+    public function __construct()
+    {
+    $this->middleware('auth');
+    // $this->middleware(function($request, $next){
+    // if(Gate::allows('manage')) return $next($request);
+    // abort(403, 'Anda tidak memiliki cukup hak akses');
+    // });
+    }
     public function index($id){
         $article = Article::find($id);
         return view('articleCake', ['id'=>$id])->with(compact('article'));
@@ -20,10 +30,14 @@ class ArticleCakeController extends Controller
         return view('manage.AddArticle');
     }
     public function create(Request $request){
+        if($request->file('image')){
+            $image = $request->file('image')->store('images','public');
+            }
+           
         Article::create([
         'title' => $request->title,
         'content' => $request->content,
-        'featured_image' => $request->image
+        'featured_image' => $image
     ]);
         return redirect('/manage');
     }
@@ -35,7 +49,13 @@ class ArticleCakeController extends Controller
         $article = Article::find($id);
         $article->title = $request->title;
         $article->content = $request->content;
-        $article->featured_image = $request->image;
+        if($article->featured_image && 
+        file_exists(storage_path('app/public/' . $article->featured_image)))
+        {
+            \Storage::delete('public/'.$article->featured_image);
+        }
+        $image = $request->file('image')->store('images', 'public');
+        $article->featured_image = $image;
         $article->save();
         return redirect('/manage');
     }

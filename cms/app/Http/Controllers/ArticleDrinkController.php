@@ -5,8 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Drink;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Gate;
 class ArticleDrinkController extends Controller
 {
+   
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
     public function index($id){
 
         $drink = Drink::find($id);
@@ -21,10 +27,13 @@ class ArticleDrinkController extends Controller
         return view('manage.AddDrink');
     }
     public function create(Request $request){
+        if($request->file('image')){
+            $image = $request->file('image')->store('images','public');
+            }
         Drink::create([
         'title' => $request->title,
         'content' => $request->content,
-        'featured_image' => $request->image
+        'featured_image' => $image
     ]);
         return redirect('/manageDrink');
     }
@@ -36,7 +45,13 @@ class ArticleDrinkController extends Controller
         $drink = Drink::find($id);
         $drink->title = $request->title;
         $drink->content = $request->content;
-        $drink->featured_image = $request->image;
+        if($drink->featured_image && 
+        file_exists(storage_path('app/public/' . $drink->featured_image)))
+        {
+            \Storage::delete('public/'.$drink->featured_image);
+        }
+        $image = $request->file('image')->store('images', 'public');
+        $drink->featured_image = $image;
         $drink->save();
         return redirect('/manageDrink');
     }

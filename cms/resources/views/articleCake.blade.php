@@ -8,7 +8,7 @@
 <section class="articCake mt-5">
         <div class="container d-flex">
             <div class="artic card " style="width: 45rem;" >
-                <img src="{{$article->featured_image}} " class="card-img-top" alt="...">
+                <img src="{{asset('storage/'.$article->featured_image)}} " class="card-img-top" alt="...">
                 <div class="card-body">
                     <h3 style="color: rgb(240, 148, 27);">{{$article->title}}</h3>
                 <p class="card-text">{{$article->content}}</p>

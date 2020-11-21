@@ -35,13 +35,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item {{ request()->is('Cake') ? ' active' : ''}}">
+                    @can('home')
                     <a class="nav-link" href="{{ url('./Cake') }}">CAKE</a>
+                    @endcan
                     </li>
                     <li class="nav-item  {{ request()->is('Food') ? ' active' : ''}}">
+                        @can('home')
                         <a class="nav-link" href="{{ url('./Food') }}">FOOD</a>
+                        @endcan
                     </li>
                     <li class="nav-item  {{ request()->is('Drink') ? ' active' : ''}}">
+                        @can('home')
                         <a class="nav-link" href="{{ url('./Drink') }}">DRINK</a>
+                        @endcan
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

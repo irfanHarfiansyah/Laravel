@@ -1,37 +1,45 @@
-@extends('layouts.Master')
+@extends('layouts.admin')
 
-@section('title', 'Manage')
+@section('title', 'Manage-Food')
     
 @section('content')
-
+<style>
+    .textCake{
+        margin-left: 190px;
+    }
+</style>
 <div class="container" style="padding-top: 90px">
     <div class="textCake" style="padding-top: 10px">
-        <p>TABEL</p>
-      </div>
+        <p style="font-size: 50px">TABEL FOOD</p>
+        <a href="/manageFood/cetak_pdf" class="btn btn-warning float-left mb-4"target="_blank">CETAK PDF</a>
+      
     <table class="table table-bordered table-striped" style="text-align: center" >
         <thead>
         <tr>
         <th>No</th>
         <th>Judul</th>
         <th>Tanggal</th>
+        <th>Foto</th>
         <th><i class="fas fa-sliders-h"></i></th>
         </tr>
         </thead>
         <tbody>
         @foreach($food as $a)
         <tr>
-        <td>{{$a->id}}</td>
-        <td>{{$a->title}}</td>
-        <td>{{$a->created_at}}</td>
-        <td><a href="manageFood/editFood/{{ $a->id }}" class="badge badge-warning">Edit</a>
-            <a href="manageFood/delete/{{ $a->id }}" class="badge badge-danger">Hapus</a>
-        </td>
-        
+            <td>{{$a->id}}</td>
+            <td>{{$a->title}}</td>
+            <td>{{$a->created_at}}</td>
+            <td> <img height="120px" src="{{asset('/storage/'.$a->featured_image)}}"></td>
+            <td><a href="manageFood/editFood/{{ $a->id }}" class="badge badge-warning">Edit</a>
+                <a href="manageFood/delete/{{ $a->id }}" class="badge badge-danger">Hapus</a>
+            </td>
         </tr>
         @endforeach
         </tbody>
     </table>
-    <a href="manageFood/addFood" class="btn btn-dark float-right">Tambah Data</a>
+ </div>
+    <a href="manageFood/addFood" class="btn btn-dark float-right mb-5">Tambah Data</a>
+</div>
 
 @endsection
     

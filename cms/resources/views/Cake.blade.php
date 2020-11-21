@@ -20,7 +20,7 @@
     
 @foreach ($article as $artic)  
             <div class="card">
-              <a href="#"><img class="card-img" src="{{ $artic->featured_image }}" alt=""></a>
+              <a href="#"><img class="card-img" src="{{asset('storage/'.$artic->featured_image)}}" alt=""></a>
               <div class="card-body ">
                 <h4 class="card-title">
                  {{ $artic->title }}
@@ -35,7 +35,7 @@
    
 
 @endforeach
-<a href="/manage" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a>
+{{-- <a href="/manage" class="manage"><button style="outline: none">MANAGE <i class="fa-1x fas fa-cogs"></i></button></a> --}}
         <!-- Pagination -->
         <ul class="pagination justify-content-center">
           <li class="page-ite" >
