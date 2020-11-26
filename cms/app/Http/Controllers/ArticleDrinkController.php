@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 class ArticleDrinkController extends Controller
 {
-   
-    public function __construct()
-    {
-    $this->middleware('auth');
-    }
     public function index($id){
 
         $drink = Drink::find($id);
@@ -59,5 +54,14 @@ class ArticleDrinkController extends Controller
         $drink = Drink::find($id);
         $drink->delete();
         return redirect('/manageDrink');
+    }
+    
+    public function __construct()
+    {
+    $this->middleware('auth');
+    // $this->middleware(function($request, $next){
+    //     if(Gate::allows('home')) return $next($request);
+    //     abort(403, 'Anda tidak memiliki cukup hak akses');
+    //     });
     }
 }

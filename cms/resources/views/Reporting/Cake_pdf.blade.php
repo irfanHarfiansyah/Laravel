@@ -36,7 +36,7 @@
     <td>{{ $i++ }}</td>
     <td>{{$a->title}}</td>
     <td style="text-align: justify;">{{$a->content}}</td>
-    <td><img width="90px" src="{{public_path('storage/'.$a->featured_image)}}"></td>
+    <td><img height="120px" width="190px" src="{{public_path('storage/'.$a->featured_image)}}" style="object-fit: cover"></td>
     </tr>
 @endforeach
 </tbody>

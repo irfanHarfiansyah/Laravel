@@ -7,6 +7,9 @@
     .textCake{
         margin-left: 190px;
     }
+    td.f{
+        vertical-align: middle;
+    }
 </style>
 <div class="container" style="padding-top: 90px">
     <div class="textCake" style="padding-top: 10px">
@@ -26,11 +29,11 @@
         <tbody>
         @foreach($food as $a)
         <tr>
-            <td>{{$a->id}}</td>
-            <td>{{$a->title}}</td>
-            <td>{{$a->created_at}}</td>
-            <td> <img height="120px" src="{{asset('/storage/'.$a->featured_image)}}"></td>
-            <td><a href="manageFood/editFood/{{ $a->id }}" class="badge badge-warning">Edit</a>
+            <td class="f">{{$a->id}}</td>
+            <td class="f">{{$a->title}}</td>
+            <td class="f">{{$a->created_at}}</td>
+            <td > <img height="120px" width="190px" src="{{asset('/storage/'.$a->featured_image)}}" style="object-fit: cover"></td>
+            <td class="f"><a href="manageFood/editFood/{{ $a->id }}" class="badge badge-warning">Edit</a>
                 <a href="manageFood/delete/{{ $a->id }}" class="badge badge-danger">Hapus</a>
             </td>
         </tr>

@@ -8,15 +8,6 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
 class ArticleCakeController extends Controller
 {   
-
-    public function __construct()
-    {
-    $this->middleware('auth');
-    // $this->middleware(function($request, $next){
-    // if(Gate::allows('manage')) return $next($request);
-    // abort(403, 'Anda tidak memiliki cukup hak akses');
-    // });
-    }
     public function index($id){
         $article = Article::find($id);
         return view('articleCake', ['id'=>$id])->with(compact('article'));
@@ -63,6 +54,15 @@ class ArticleCakeController extends Controller
         $article = Article::find($id);
         $article->delete();
         return redirect('/manage');
+    }
+    
+    public function __construct()
+    {
+    $this->middleware('auth');
+    // $this->middleware(function($request, $next){
+    // if(Gate::allows('home')) return $next($request);
+    // abort(403, 'Anda tidak memiliki cukup hak akses');
+    // });
     }
 
 }

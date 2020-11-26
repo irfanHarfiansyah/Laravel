@@ -32,8 +32,8 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav" >
+              <ul class="navbar-nav">
                 <li class="nav-item {{ request()->is('Cake') ? ' active' : ''}}">
                     @can('home')
                     <a class="nav-link" href="{{ url('./Cake') }}">CAKE</a>
@@ -49,9 +49,9 @@
                         <a class="nav-link" href="{{ url('./Drink') }}">DRINK</a>
                         @endcan
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class=" fas fa-user-circle mr-1"></i>  {{ Auth::user()->name  }}
+                            <img width="25px" src="{{asset('/storage/'.Auth::user()->image)}}" alt="">  {{ Auth::user()->name  }}
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item " href="{{ route('logout') }}"

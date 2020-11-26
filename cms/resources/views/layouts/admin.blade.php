@@ -25,10 +25,10 @@
             </form>
             <!-- Navbar-->
         {{-- <div class=" navbar-collapse" id="navbarSupportedContent"> --}}
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
+            <ul class="navbar-nav ">
+                <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class=" fas fa-user-circle mr-1"></i>  {{ Auth::user()->name  }}
+                        <img width="25px" src="{{asset('/storage/'.Auth::user()->image)}}" alt="">  {{ Auth::user()->name  }}
                     </a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item " href="{{ route('logout') }}"

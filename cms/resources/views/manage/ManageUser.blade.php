@@ -8,6 +8,9 @@
     .textCake{
         margin-left: 190px;
     }
+    td.f{
+        vertical-align: middle
+    }
 </style>
 
 <div class="container" style="padding-top: 90px">
@@ -28,12 +31,12 @@
         <tbody>
         @foreach($user as $u)
         <tr >
-            <td>{{$u->id}}</td>
+            <td class="f">{{$u->id}}</td>
             <td><img height="80px" src="{{asset('/storage/'.$u->image)}}"></td>
-            <td>{{$u->name}}</td>
-            <td>{{$u->email}}</td>
-            <td>{{$u->roles}}</td>  
-            <td>
+            <td class="f">{{$u->name}}</td>
+            <td class="f">{{$u->email}}</td>
+            <td class="f">{{$u->roles}}</td>  
+            <td class="f">
                 <a href="manageUser/editUser/{{ $u->id }}" class="badge badge-warning">Edit</a>
                 <a href="manageUser/delete/{{ $u->id }}" class="badge badge-danger">Hapus</a>
             </td>
