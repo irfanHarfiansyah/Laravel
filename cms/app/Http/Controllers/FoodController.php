@@ -21,11 +21,11 @@ class FoodController extends Controller
      }
      public function __construct()
      {
-        // $this->middleware('auth');
-        $this->middleware(function($request, $next){
-            if(Gate::allows('home')) return $next($request);
-            abort(403, 'Anda tidak memiliki cukup hak akses');
-            });
+        $this->middleware('auth');
+        // $this->middleware(function($request, $next){
+        //     if(Gate::allows('home')) return $next($request);
+        //     abort(403, 'Anda tidak memiliki cukup hak akses');
+        //     });
      }
      public function cetak_pdf(){
         $food = Food::all();
